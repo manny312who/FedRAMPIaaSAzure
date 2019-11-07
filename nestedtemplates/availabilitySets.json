@@ -18,7 +18,7 @@
         "name": "[parameters('adAvailabilitySetName')]",
         "apiVersion": "2015-06-15",
         "tags": {
-            "Project": "Blueprint"
+            "Project": "[parameters('tag')]"
         },
         "location": "[parameters('location')]"
     },
@@ -27,7 +27,7 @@
         "name": "[parameters('webAvailabilitySetName')]",
         "apiVersion": "2015-06-15",
         "tags": {
-            "Project": "Blueprint"
+            "Project": "[parameters('tag')]"
         },
         "location": "[parameters('location')]",
         "properties": {

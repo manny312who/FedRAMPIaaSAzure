@@ -70,7 +70,7 @@
       "name": "[parameters('mgtPublicIPName')]",
       "location": "[parameters('location')]",
       "tags": {
-        "Project": "Blueprint"
+        "Project": "[parameters('tag')]"
       },
       "properties": {
         "publicIPAllocationMethod": "Dynamic"
@@ -85,7 +85,7 @@
       ],
       "apiVersion": "2015-06-15",
       "tags": {
-        "Project": "Blueprint"
+        "Project": "[parameters('tag')]"
       },
       "properties": {
         "ipConfigurations": [
@@ -114,7 +114,7 @@
         "name": "[concat(parameters('webNICName'), copyindex())]",
         "location": "[parameters('location')]",
         "tags": {
-            "Project": "Blueprint"
+            "Project": "[parameters('tag')]"
         },
         "copy": {
             "name": "nicLoopDEL",

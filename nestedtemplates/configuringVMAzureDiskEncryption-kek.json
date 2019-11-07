@@ -46,7 +46,7 @@
             "name": "[concat(parameters('vmName'),'/', parameters('vmEncryptionSettings').diskEncryptionExtensionName)]",
             "apiVersion": "2017-12-01",
             "tags": {
-                "Project": "Blueprint"
+                "Project": "[parameters('tag')]"
             },
             "location": "[resourceGroup().location]",
             "properties": {

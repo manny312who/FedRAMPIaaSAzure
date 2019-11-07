@@ -170,7 +170,7 @@
         "name": "[concat(parameters('WebVMName'), copyindex())]",
         "location": "[parameters('location')]",
         "tags": {
-            "Project": "Blueprint"
+            "Project": "[parameters('tag')]"
         },
         "copy": {
             "name": "vmLoopDEL",

@@ -138,7 +138,7 @@
         "location": "[parameters('location')]",
         "apiVersion": "2015-06-15",
         "tags": {
-          "Project": "Blueprint"
+          "Project": "[parameters('tag')]"
         },
         "properties": {
           "ipConfigurations": [
@@ -164,7 +164,7 @@
         "location": "[parameters('location')]",
         "apiVersion": "2015-06-15",
         "tags": {
-          "Project": "Blueprint"
+          "Project": "[parameters('tag')]"
         },
         "properties": {
           "ipConfigurations": [
@@ -190,7 +190,7 @@
           "name": "[parameters('adPDCVMName')]",
           "location": "[parameters('location')]",
           "tags": {
-              "Project": "Blueprint"
+              "Project": "[parameters('tag')]"
           },
           "dependsOn": [
               "[resourceId('Microsoft.Network/networkInterfaces', parameters('adPDCNicName'))]"
@@ -253,7 +253,7 @@
           "name": "[parameters('adBDCVMName')]",
           "location": "[parameters('location')]",
           "tags": {
-              "Project": "Blueprint"
+              "Project": "[parameters('tag')]"
           },
           "dependsOn": [
               "[resourceId('Microsoft.Network/networkInterfaces', parameters('adBDCNicName'))]"
@@ -314,7 +314,7 @@
             "name": "BDCBaselineDSC",
             "apiVersion": "2016-03-30",
             "tags": {
-              "Project": "Blueprint"
+              "Project": "[parameters('tag')]"
             },
             "location": "[parameters('location')]",
             "dependsOn": [
@@ -350,7 +350,7 @@
             "name": "[concat(parameters('adPDCVMName'),'/PDCBaselineDSC')]",
             "apiVersion": "2015-06-15",
             "tags": {
-                "Project": "Blueprint"
+                "Project": "[parameters('tag')]"
             },
             "location": "[parameters('location')]",
             "dependsOn": [

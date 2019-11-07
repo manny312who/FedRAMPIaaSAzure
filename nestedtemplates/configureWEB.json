@@ -107,7 +107,7 @@
               "type": "Microsoft.Compute/virtualMachines/extensions",
               "name": "[concat(parameters('WebVMName'), copyindex(), '/joindomain')]",
               "tags": {
-                  "Project": "Blueprint"
+                  "Project": "[parameters('tag')]"
               },
               "copy": {
                   "name": "vmLoopJoin",
@@ -138,7 +138,7 @@
             "name": "[concat(parameters('WebVMName'), copyindex(), '/WebBaselineDSC')]",
             "apiVersion": "2015-05-01-preview",
             "tags": {
-                "Project": "Blueprint"
+                "Project": "[parameters('tag')]"
             },
             "copy": {
                 "name": "vmLoopBaseline",

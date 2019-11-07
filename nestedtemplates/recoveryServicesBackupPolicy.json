@@ -15,7 +15,7 @@
       "dependsOn": [],
       "location": "[resourceGroup().location]",
       "tags": {
-        "Project": "Blueprint"
+        "Project": "[parameters('tag')]"
       },
       "properties": {
         "backupManagementType": "AzureIaasVM",

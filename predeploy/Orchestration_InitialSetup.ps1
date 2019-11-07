@@ -295,7 +295,7 @@ function orchestration {
 
 	    # Create AAD app . Fill in $aadClientSecret variable if AAD app was already created
         $guid = [Guid]::NewGuid().toString();
-        $aadAppName = "Blueprint" + $guid ;
+        $aadAppName = "[parameters('tag')]" + $guid ;
 		# Check if AAD app with $aadAppName was already created
 		$SvcPrincipals = (Get-AzureRmADServicePrincipal -SearchString $aadAppName);
 		if(-not $SvcPrincipals) {
